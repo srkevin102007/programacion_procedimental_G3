@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=9, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Nombre
+     Apellido
+     Tipo de documento
+     Número de documento
+     Telefono
+     Correo electronico
+     Genero
+     Cargo
+     Fecha de nacimiento
+     Contraseña
+     -->
+
+    <!--Nombre-->
+    <div class="field">
+      <label class="label">Nombre</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" />
+      </div>
+    </div>
+
+    <!--Apellido-->
+    <div class="field">
+      <label class="label">Apellido</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" />
+      </div>
+    </div>
+    <!--Tipo Documento-->
+    <div class="control">
+      <label class="label">Tipo de Documento</label>
+      <div class="select">
+        <select>
+          <option>C.C</option>
+          <option>T.I</option>
+          <option>Otro</option>
+        </select>
+      </div>
+    </div>
+
+    <!--Número de Documento-->
+    <div class="field">
+      <label class="label">Numero de Documento</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text input" />
+      </div>
+    </div>
+
+    <!--Teléfono-->
+    <label class="label">Teléfono</label>
+    <div class="field is-horizontal">
+      <div class="field-label"></div>
+      <div class="field-body">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <p class="control">
+              <a class="button is-static"> +57 </a>
+            </p>
+            <p class="control is-expanded">
+              <input class="input" type="tel" placeholder="Tu Número" />
+            </p>
+          </div>
+          <p class="help">Verifica los digitos</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Correo Electrónico-->
+    <label class="label">Correo Electrónico</label>
+    <div class="field has-addons">
+      <p class="control">
+        <input class="input" type="text" placeholder="Tu Correo" />
+      </p>
+      <p class="control">
+        <a class="button is-static"> @gmail.com </a>
+      </p>
+    </div>
+
+    <!--Género-->
+    <div class="control">
+      <label class="label">Género</label>
+      <div class="select">
+        <select>
+          <option>Masculino</option>
+          <option>Femenino</option>
+          <option></option>
+        </select>
+      </div>
+    </div>
+
+    <!--Cargo-->
+    <div class="control">
+      <label class="label">Cargo</label>
+      <div class="select">
+        <select>
+          <option>Tecnico</option>
+          <option>Profesional</option>
+          <option></option>
+        </select>
+      </div>
+    </div>
+
+    <!--Fecha Nac-->
+    <div class="control">
+      <label class="label">Cargo</label>
+      <input class="input" type="date" placeholder="Fecha Nacimiento" />
+    </div>
+
+    <!--Contraseña-->
+    <div class="field">
+      <label class="label">Contraseña</label>
+      <p class="control has-icons-left">
+        <input class="input" type="password" placeholder="Contraseña" />
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
+  </body>
+</html>
