@@ -1,11 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contabilidad - Restaurante</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Iconos opcionales (FontAwesome) -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+
+        .profile-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ebfffc;
+            border: 3px solid #00d1b2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        
+    </style>
 </head>
+
 <body>
-    
+    <section class="section">
+        <div class="container">
+
+            <h1 class="title is-2 has-text-weight-bold page-title">
+                <span class="has-text-primary">CONTABILIDAD</span>
+            </h1>
+
+            <div class="columns is-desktop">
+
+                <!-- Perfil de Usuario -->
+                <div class="column is-4-desktop">
+                    <div class="card profile-card p-5">
+                        <div class="photo-circle">
+                            <!-- Icono de usuario de relleno -->
+                            <span class="icon is-large has-text-primary">
+                                <i class="fas fa-user fa-3x"></i>
+                            </span>
+                        </div>
+
+                        <div class="field">
+                            <div class="file is-primary is-small is-centered has-name">
+                                <label class="file-label">
+                                    <input class="file-input" type="file" name="resume">
+                                    <span class="file-cta">
+                                        <span class="file-icon">
+                                            <i class="fas fa-upload"></i>
+                                        </span>
+                                        <span class="file-label">Subir Foto</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <p class="title is-4 mt-3">Nombre de Usuario</p>
+                        <div class="field">
+
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Ingresa usuario">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Registro -->
+                <div class="column">
+                    <div class="card p-5">
+                        <p class="subtitle is-4 has-text-weight-bold">
+                            <span class="icon mr-2"><i class="fas fa-edit"></i></span>Registro de Movimientos
+                        </p>
+                        <hr>
+
+                        <form>
+                            <div class="columns is-multiline">
+                                <!-- Ventas -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label">Ventas</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input is-primary" type="number" placeholder="0.00">
+                                            <span class="icon is-small is-left"><i
+                                                    class="fas fa-shopping-cart"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Fecha -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label">Fecha</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input is-primary" type="date">
+                                            <span class="icon is-small is-left"><i class="fas fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Ingresos -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label">Ingresos</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input is-success" type="number" placeholder="Total ingresos">
+                                            <span class="icon is-small is-left"><i class="fas fa-arrow-up"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Egresos -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label">Egresos</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input is-danger" type="number" placeholder="Total egresos">
+                                            <span class="icon is-small is-left"><i class="fas fa-arrow-down"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Concepto -->
+                                <div class="column is-12">
+                                    <div class="field">
+                                        <label class="label">Concepto</label>
+                                        <div class="control">
+                                            <textarea class="textarea is-primary"
+                                                placeholder="Descripción del movimiento" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Valor -->
+                                <div class="column is-12">
+                                    <div class="field">
+                                        <label class="label">Valor Total</label>
+                                        <div class="control has-icons-left">
+                                            <input class="input is-primary is-medium" type="number" placeholder="0.00">
+                                            <span class="icon is-small is-left"><i
+                                                    class="fas fa-dollar-sign"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5">
+                                <button class="button is-primary is-fullwidth is-medium has-text-weight-bold"
+                                    type="submit">
+                                    <span class="icon"><i class="fas fa-save"></i></span>
+                                    <span>Guardar Datos</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
