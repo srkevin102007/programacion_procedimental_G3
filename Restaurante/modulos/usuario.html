@@ -1,131 +1,111 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=9, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- Nombre
-     Apellido
-     Tipo de documento
-     Número de documento
-     Telefono
-     Correo electronico
-     Genero
-     Cargo
-     Fecha de nacimiento
-     Contraseña
-     -->
+<html lang="es">
 
-    <!--Nombre-->
-    <div class="field">
-      <label class="label">Nombre</label>
-      <div class="control">
-        <input class="input" type="text" placeholder="Text input" />
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="../css/usuarios.css">
+  <title>Usuario - Restaurante</title>
 
-    <!--Apellido-->
-    <div class="field">
-      <label class="label">Apellido</label>
-      <div class="control">
-        <input class="input" type="text" placeholder="Text input" />
-      </div>
-    </div>
-    <!--Tipo Documento-->
-    <div class="control">
-      <label class="label">Tipo de Documento</label>
-      <div class="select">
-        <select>
-          <option>C.C</option>
-          <option>T.I</option>
-          <option>Otro</option>
-        </select>
-      </div>
-    </div>
+</head>
 
-    <!--Número de Documento-->
-    <div class="field">
-      <label class="label">Numero de Documento</label>
-      <div class="control">
-        <input class="input" type="text" placeholder="Text input" />
-      </div>
-    </div>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-10-tablet is-8-desktop is-6-widescreen">
+          <div class="form-box">
+            <h1 class="title has-text-centered form-title">Formulario de Usuario</h1>
+            <form>
+              <div class="field">
+                <label class="label">Tipo de Documento</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select required>
+                      <option value="">Selecciona una opción</option>
+                      <option>C.C</option>
+                      <option>T.I</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
 
-    <!--Teléfono-->
-    <label class="label">Teléfono</label>
-    <div class="field is-horizontal">
-      <div class="field-label"></div>
-      <div class="field-body">
-        <div class="field is-expanded">
-          <div class="field has-addons">
-            <p class="control">
-              <a class="button is-static"> +57 </a>
-            </p>
-            <p class="control is-expanded">
-              <input class="input" type="tel" placeholder="Tu Número" />
-            </p>
+              <div class="field">
+                <label class="label">Número de Documento</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="123456789" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Teléfono</label>
+                <div class="control">
+                  <input class="input" type="tel" placeholder="3001234567" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Correo Electrónico</label>
+                <div class="control">
+                  <input class="input" type="email" placeholder="usuario@email.com" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Género</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select required>
+                      <option value="">Selecciona una opción</option>
+                      <option>Masculino</option>
+                      <option>Femenino</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Fecha de Nacimiento</label>
+                <div class="control">
+                  <input class="input" type="date" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Cargo</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Escribe el cargo" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Contraseña</label>
+                <div class="control">
+                  <input class="input" type="password" placeholder="••••••••" required />
+                </div>
+              </div>
+
+              <div class="field mt-5">
+                <div class="control">
+                  <button class="button is-link is-fullwidth">Enviar</button>
+                </div>
+
+                <div class="field mt-5">
+                  <div class="control">
+                    <a class="button is-primary is-medium" href="../index.html">
+                      Volver
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
-          <p class="help">Verifica los digitos</p>
         </div>
       </div>
     </div>
+  </section>
+</body>
 
-    <!--Correo Electrónico-->
-    <label class="label">Correo Electrónico</label>
-    <div class="field has-addons">
-      <p class="control">
-        <input class="input" type="text" placeholder="Tu Correo" />
-      </p>
-      <p class="control">
-        <a class="button is-static"> @gmail.com </a>
-      </p>
-    </div>
-
-    <!--Género-->
-    <div class="control">
-      <label class="label">Género</label>
-      <div class="select">
-        <select>
-          <option>Masculino</option>
-          <option>Femenino</option>
-          <option></option>
-        </select>
-      </div>
-    </div>
-
-    <!--Cargo-->
-    <div class="control">
-      <label class="label">Cargo</label>
-      <div class="select">
-        <select>
-          <option>Tecnico</option>
-          <option>Profesional</option>
-          <option></option>
-        </select>
-      </div>
-    </div>
-
-    <!--Fecha Nac-->
-    <div class="control">
-      <label class="label">Cargo</label>
-      <input class="input" type="date" placeholder="Fecha Nacimiento" />
-    </div>
-
-    <!--Contraseña-->
-    <div class="field">
-      <label class="label">Contraseña</label>
-      <p class="control has-icons-left">
-        <input class="input" type="password" placeholder="Contraseña" />
-        <span class="icon is-small is-left">
-          <i class="fas fa-lock"></i>
-        </span>
-      </p>
-    </div>
-  </body>
 </html>

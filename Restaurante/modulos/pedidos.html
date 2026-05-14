@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pedidos - Restaurante</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/pedidos.css">
 </head>
+
 <body>
-    
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="form-container">
+                        <h1 class="title form-title"> Pedido</h1>
+
+                        <form id="formularioPedido">
+                            <!-- Nombre del Usuario -->
+                            <div class="field">
+                                <label class="label">Nombre del Usuario</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="nombreUsuario"
+                                        placeholder="Ingrese el nombre completo" required>
+                                </div>
+                            </div>
+
+                            <!-- Producto -->
+                            <div class="field">
+                                <label class="label">Producto</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select id="producto" required>
+                                            <option value="">Seleccione un producto</option>
+                                            <option value="Mate Tradicional Argentino">Mate Tradicional Argentino
+                                            </option>
+                                            <option value="Malteadas">Malteadas</option>
+                                            <option value="Wafles">Wafles</option>
+                                            <option value="Cholado Colombiano">Cholado Colombiano</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cantidad -->
+                            <div class="field">
+                                <label class="label">Cantidad</label>
+                                <div class="control">
+                                    <input class="input" type="number" id="cantidad" placeholder="Ingrese la cantidad"
+                                        min="1" required>
+                                </div>
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="field">
+                                <label class="label">Teléfono</label>
+                                <div class="control">
+                                    <input class="input" type="tel" id="telefono" placeholder="Ingresa el teléfono"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Dirección -->
+                            <div class="field">
+                                <label class="label">Dirección</label>
+                                <div class="control">
+                                    <textarea class="textarea" id="direccion"
+                                        placeholder="Ingrese su dirección de entrega" rows="3" required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Método de Pago -->
+                            <div class="field">
+                                <label class="label">Método de Pago</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select id="metodoPago" required>
+                                            <option>Seleccione metodo de pago</option>
+                                            <option value="Nequi">Nequi</option>
+                                            <option value="Daviplata">Daviplata</option>
+                                            <option value="PayPal">PayPal</option>
+                                            <option value="Bancolombia">Bancolombia</option>
+                                            <option>Subame la nota profe </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="notification is-danger error-message" id="mensajeError">
+                                <button class="delete"></button>
+                                <span id="textoError"></span>
+                            </div>
+
+                            <div class="button-group">
+                                <button class="button is-success is-medium" type="submit">Realizar Pedido</button>
+                            </div>
+                            <div class="field mt-5">
+                                <div class="control">
+                                    <a class="button is-primary is-medium" href="../index.html">
+                                        Volver
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 </body>
+
 </html>
