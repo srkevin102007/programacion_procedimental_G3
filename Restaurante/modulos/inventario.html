@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-   
+
 </head>
 
 <body>
@@ -20,28 +20,31 @@
                             <div class="field">
                                 <label class="label">Código del Producto</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="Ingresa el código del producto" required>
+                                    <input class="input" type="text" placeholder="Ingresa el código del producto"
+                                        required id="codigo_producto">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <label class="label">Nombre del Producto</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="Ingresa el nombre del producto" required>
+                                    <input class="input" type="text" placeholder="Ingresa el nombre del producto"
+                                        required id="nombre_producto">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <label class="label">Cantidad de Productos</label>
                                 <div class="control">
-                                    <input class="input" type="number" min="1" placeholder="Ingresa la cantidad" required>
+                                    <input class="input" type="number" min="1" placeholder="Ingresa la cantidad"
+                                        required id="cantidad_producto">
                                 </div>
                             </div>
 
                             <div class="field">
                                 <label class="label">Marca del Producto</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="Ingresa la marca" required>
+                                    <input class="input" type="text" placeholder="Ingresa la marca" required id="marca_producto">
                                 </div>
                             </div>
 
@@ -50,7 +53,7 @@
                                     <button class="button is-primary is-fullwidth">Guardar</button>
                                 </div>
 
-                                 <div class="field mt-5">
+                                <div class="field mt-5">
                                     <div class="control">
                                         <a class="button is-primary is-medium" href="../index.html">
                                             Volver
@@ -62,10 +65,11 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
-       
+
     </section>
+    <script src="../js/inventario.js"></script>
 </body>
 
 </html>

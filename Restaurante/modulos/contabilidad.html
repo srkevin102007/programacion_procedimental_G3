@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+
     <section class="section">
         <div class="container">
 
@@ -71,7 +73,8 @@
                                     <div class="field">
                                         <label class="label">Ventas</label>
                                         <div class="control has-icons-left">
-                                            <input class="input is-primary" type="number" placeholder="0.00">
+                                            <input class="input is-primary" type="number" placeholder="0.00" id="ventas"
+                                                required>
                                             <span class="icon is-small is-left"><i
                                                     class="fas fa-shopping-cart"></i></span>
                                         </div>
@@ -83,7 +86,7 @@
                                     <div class="field">
                                         <label class="label">Fecha</label>
                                         <div class="control has-icons-left">
-                                            <input class="input is-primary" type="date">
+                                            <input class="input is-primary" type="date" id="fecha">
                                             <span class="icon is-small is-left"><i class="fas fa-calendar"></i></span>
                                         </div>
                                     </div>
@@ -94,7 +97,8 @@
                                     <div class="field">
                                         <label class="label">Ingresos</label>
                                         <div class="control has-icons-left">
-                                            <input class="input is-success" type="number" placeholder="Total ingresos">
+                                            <input class="input is-success" type="number" placeholder="Total ingresos"
+                                                id="ingresos">
                                             <span class="icon is-small is-left"><i class="fas fa-arrow-up"></i></span>
                                         </div>
                                     </div>
@@ -105,7 +109,7 @@
                                     <div class="field">
                                         <label class="label">Egresos</label>
                                         <div class="control has-icons-left">
-                                            <input class="input is-danger" type="number" placeholder="Total egresos">
+                                            <input class="input is-danger" type="number" placeholder="Total egresos" id="egresos" required>
                                             <span class="icon is-small is-left"><i class="fas fa-arrow-down"></i></span>
                                         </div>
                                     </div>
@@ -127,7 +131,7 @@
                                     <div class="field">
                                         <label class="label">Valor Total</label>
                                         <div class="control has-icons-left">
-                                            <input class="input is-primary is-medium" type="number" placeholder="0.00">
+                                            <input class="input is-primary is-medium" type="number" placeholder="0.00" id="valor_total">
                                             <span class="icon is-small is-left"><i
                                                     class="fas fa-dollar-sign"></i></span>
                                         </div>
@@ -159,6 +163,8 @@
         </div>
         </div>
     </section>
+
+    <script src="../js/contabilidad.js"></script>
 </body>
 
 </html>

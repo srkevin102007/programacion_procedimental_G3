@@ -22,7 +22,7 @@
                 <label class="label">Tipo de Documento</label>
                 <div class="control">
                   <div class="select is-fullwidth">
-                    <select required>
+                    <select id="tipo_documento" required>
                       <option value="">Selecciona una opción</option>
                       <option>C.C</option>
                       <option>T.I</option>
@@ -35,21 +35,21 @@
               <div class="field">
                 <label class="label">Número de Documento</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="123456789" required />
+                  <input class="input" type="text" placeholder="123456789" id="numero_documento" required />
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Teléfono</label>
                 <div class="control">
-                  <input class="input" type="tel" placeholder="3001234567" required />
+                  <input class="input" type="tel" placeholder="3001234567" required id="telefono" />
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Correo Electrónico</label>
                 <div class="control">
-                  <input class="input" type="email" placeholder="usuario@email.com" required />
+                  <input class="input" type="email" placeholder="usuario@email.com" id="correo_electronico" required />
                 </div>
               </div>
 
@@ -57,7 +57,7 @@
                 <label class="label">Género</label>
                 <div class="control">
                   <div class="select is-fullwidth">
-                    <select required>
+                    <select id="genero" required>
                       <option value="">Selecciona una opción</option>
                       <option>Masculino</option>
                       <option>Femenino</option>
@@ -69,21 +69,21 @@
               <div class="field">
                 <label class="label">Fecha de Nacimiento</label>
                 <div class="control">
-                  <input class="input" type="date" required />
+                  <input class="input" type="date" id="fecha_nacimiento" required />
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Cargo</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Escribe el cargo" required />
+                  <input class="input" type="text" placeholder="Escribe el cargo" id="cargo" required />
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Contraseña</label>
                 <div class="control">
-                  <input class="input" type="password" placeholder="••••••••" required />
+                  <input class="input" type="password" placeholder="••••••••" id="contraseña" required />
                 </div>
               </div>
 
@@ -106,6 +106,7 @@
       </div>
     </div>
   </section>
+  <script src="../js/usuario.js"></script>
 </body>
 
 </html>
