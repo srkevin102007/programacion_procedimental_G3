@@ -9,8 +9,8 @@ function validarFormulario() {
     nombre_producto === "" ||
     cantidad_producto === "" ||
     marca_producto === ""
-  ) {
-    console.log("Los campos están vacíos");
+  ) { 
+      console.log("Los campos están vacíos");
   } else {
     if (codigo_producto != /[0-9]/) {
       console.log("Solo puede contener números");
