@@ -1,9 +1,8 @@
-let codigo_producto = document.getElementById("codigo_producto").value;
+function validarFormulario() {
+  let codigo_producto = document.getElementById("codigo_producto").value;
 let nombre_producto = document.getElementById("nombre_producto").value;
 let cantidad_producto = document.getElementById("cantidad_producto").value;
 let marca_producto = document.getElementById("marca_producto").value;
-
-function validarFormulario() {
   if (
     codigo_producto === "" ||
     nombre_producto === "" ||
@@ -31,3 +30,6 @@ function validarFormulario() {
 
   }
 }
+
+let btnGuardar = document.getElementById("btnGuardar").value;
+document.getElementById("btnGuardar").onclick = validarFormulario;
