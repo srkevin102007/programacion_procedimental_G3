@@ -4,27 +4,66 @@ function validarFormulario() {
   let cantidad_producto = document.getElementById("cantidad_producto").value;
   let marca_producto = document.getElementById("marca_producto").value;
   if (
-    codigo_producto === "" ||
-    nombre_producto === "" ||
-    cantidad_producto === "" ||
-    marca_producto === ""
+    codigo_producto == "" ||
+    nombre_producto == "" ||
+    cantidad_producto == "" ||
+    marca_producto == ""
   ) {
     console.log("Los campos están vacíos");
+     Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Los campos están vacíos",
+        
+      });
+      return;
   } else {
-    if (codigo_producto != /[0-9]/) {
+    if (!/[0-9]/.test(codigo_producto)) {
       console.log("Solo puede contener números");
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Código solo puede contener números",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
     }
 
-    if (nombre_producto != /[a-zA-Z]/) {
+    if (!/[a-zA-Z]/.test(nombre_producto)) {
       console.log("Solo puede contener letras");
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Nombre solo puede contener letras",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
     }
 
-    if (cantidad_producto != /[0-9]/) {
+    if (!/[0-9]/.test(cantidad_producto)) {
       console.log("Solo puede contener números");
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Cantidad solo puede contener números",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
     }
 
-    if (marca_producto != /[a-zA-Z]/) {
+    if (!/[a-zA-Z]/.test(marca_producto)) {
       console.log("Solo puede contener letras");
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Marca solo puede contener letras",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
     }
 
     Swal.fire({
@@ -37,5 +76,4 @@ function validarFormulario() {
   }
 }
 
-let btnGuardar = document.getElementById("btnGuardar").value;
 document.getElementById("btnGuardar").onclick = validarFormulario;

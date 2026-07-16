@@ -6,28 +6,66 @@ function validarFormulario() {
   let valor_total = document.getElementById("valor_total").value;
 
   if (
-    ventas === "" ||
-    fecha === "" ||
-    ingresos === "" ||
-    egresos === "" ||
-    valor_total === ""
+    ventas == "" ||
+    fecha == "" ||
+    ingresos == "" ||
+    egresos == "" ||
+    valor_total == ""
   ) {
     console.log("Los campos están vacíos");
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "Los campos están vacíos",
+    });
+    return;
   } else {
-    if (ventas != /[0-9]/) {
-      console.log("Solo puede contener números");
+    if (!/[0-9]/.test(ventas)) {
+      console.log("Ventas solo puede contener números");
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Ventas solo puede contener números",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
     }
 
-    if (ingresos != /[0-9]/) {
-      console.log("Solo puede contener números");
+    if (!/[0-9]/.test(ingresos)) {
+      console.log("Ingresos solo puede contener números");
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Ingresos solo puede contener números",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
     }
 
-    if (egresos != /[0-9]/) {
-      console.log("Solo puede contener números");
+    if (!/[0-9]/.test(egresos)) {
+      console.log("Egresos solo puede contener números");
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Ingresos solo puede contener números",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
     }
 
-    if (valor_total != /[0-9]/) {
-      console.log("Solo puede contener números");
+    if (!/[0-9]/.test(valor_total)) {
+      console.log("Valor Total solo puede contener números");
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Valor Total solo puede contener números",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
     }
     Swal.fire({
       position: "top-end",
@@ -39,5 +77,4 @@ function validarFormulario() {
   }
 }
 
-let btnGuardar = document.getElementById("btnGuardar").value;
 document.getElementById("btnGuardar").onclick = validarFormulario;

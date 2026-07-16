@@ -17,97 +17,97 @@
                     <div class="form-container">
                         <h1 class="title form-title"> Pedido</h1>
 
-                        <form id="formularioPedido">
-                            <!-- Nombre del Usuario -->
-                            <div class="field">
-                                <label class="label">Nombre del Usuario</label>
-                                <div class="control">
-                                    <input class="input" type="text" id="nombre_usuario"
-                                        placeholder="Ingrese el nombre completo" required>
+                        
+                        <!-- Nombre del Usuario -->
+                        <div class="field">
+                            <label class="label">Nombre del Usuario</label>
+                            <div class="control">
+                                <input class="input" type="text" id="nombre_usuario"
+                                    placeholder="Ingrese el nombre completo" required>
+                            </div>
+                        </div>
+
+                        <!-- Producto -->
+                        <div class="field">
+                            <label class="label">Producto</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select id="producto" required>
+                                        <option value="">Seleccione un producto</option>
+                                        <option value="Mate Tradicional Argentino">Mate Tradicional Argentino
+                                        </option>
+                                        <option value="Malteadas">Malteadas</option>
+                                        <option value="Wafles">Wafles</option>
+                                        <option value="Cholado Colombiano">Cholado Colombiano</option>
+                                    </select>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Producto -->
-                            <div class="field">
-                                <label class="label">Producto</label>
-                                <div class="control">
-                                    <div class="select is-fullwidth">
-                                        <select id="producto" required>
-                                            <option value="">Seleccione un producto</option>
-                                            <option value="Mate Tradicional Argentino">Mate Tradicional Argentino
-                                            </option>
-                                            <option value="Malteadas">Malteadas</option>
-                                            <option value="Wafles">Wafles</option>
-                                            <option value="Cholado Colombiano">Cholado Colombiano</option>
-                                        </select>
-                                    </div>
+                        <!-- Cantidad -->
+                        <div class="field">
+                            <label class="label">Cantidad</label>
+                            <div class="control">
+                                <input class="input" type="number" id="cantidad" placeholder="Ingrese la cantidad"
+                                    min="1" required>
+                            </div>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="field">
+                            <label class="label">Teléfono</label>
+                            <div class="control">
+                                <input class="input" type="tel" id="telefono" placeholder="Ingresa el teléfono"
+                                    required>
+                            </div>
+                        </div>
+
+                        <!-- Dirección -->
+                        <div class="field">
+                            <label class="label">Dirección</label>
+                            <div class="control">
+                                <textarea class="textarea" id="direccion" placeholder="Ingrese su dirección de entrega"
+                                    rows="3" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Método de Pago -->
+                        <div class="field">
+                            <label class="label">Método de Pago</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select id="metodoPago" required>
+                                        <option>Seleccione metodo de pago</option>
+                                        <option value="Nequi">Nequi</option>
+                                        <option value="Daviplata">Daviplata</option>
+                                        <option value="PayPal">PayPal</option>
+                                        <option value="Bancolombia">Bancolombia</option>
+                                        <option>Subame la nota profe </option>
+                                    </select>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Cantidad -->
-                            <div class="field">
-                                <label class="label">Cantidad</label>
-                                <div class="control">
-                                    <input class="input" type="number" id="cantidad" placeholder="Ingrese la cantidad"
-                                        min="1" required>
-                                </div>
-                            </div>
+                        <div class="notification is-danger error-message" id="mensajeError">
+                            <button class="delete"></button>
+                            <span id="textoError"></span>
+                        </div>
 
-                            <!-- Teléfono -->
-                            <div class="field">
-                                <label class="label">Teléfono</label>
-                                <div class="control">
-                                    <input class="input" type="tel" id="telefono" placeholder="Ingresa el teléfono"
-                                        required>
-                                </div>
+                        <div class="button-group">
+                            <button class="button is-success" id="btnguardar" is-fullwidth is-medium"
+                                type="submit">Realizar Pedido</button>
+                        </div>
+                        <div class="field mt-5">
+                            <div class="control">
+                                <a class="button is-primary is-medium" href="../index.html">
+                                    Volver
+                                </a>
                             </div>
-
-                            <!-- Dirección -->
-                            <div class="field">
-                                <label class="label">Dirección</label>
-                                <div class="control">
-                                    <textarea class="textarea" id="direccion"
-                                        placeholder="Ingrese su dirección de entrega" rows="3" required></textarea>
-                                </div>
-                            </div>
-
-                            <!-- Método de Pago -->
-                            <div class="field">
-                                <label class="label">Método de Pago</label>
-                                <div class="control">
-                                    <div class="select is-fullwidth">
-                                        <select id="metodoPago" required>
-                                            <option>Seleccione metodo de pago</option>
-                                            <option value="Nequi">Nequi</option>
-                                            <option value="Daviplata">Daviplata</option>
-                                            <option value="PayPal">PayPal</option>
-                                            <option value="Bancolombia">Bancolombia</option>
-                                            <option>Subame la nota profe </option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="notification is-danger error-message" id="mensajeError">
-                                <button class="delete"></button>
-                                <span id="textoError"></span>
-                            </div>
-
-                            <div class="button-group">
-                                <button class="button is-success" id="btnGuardar" is-fullwidth is-medium" type="submit">Realizar Pedido</button>
-                            </div>
-                            <div class="field mt-5">
-                                <div class="control">
-                                    <a class="button is-primary is-medium" href="../index.html">
-                                        Volver
-                                    </a>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
