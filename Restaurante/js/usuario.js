@@ -109,6 +109,13 @@ function validarFormulario() {
       });
       return;
     }
+     Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Datos guardados correctamente",
+      showConfirmButton: false,
+      timer: 1500,
+    });
 }
 
 
