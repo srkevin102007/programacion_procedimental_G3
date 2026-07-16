@@ -1,15 +1,15 @@
 function validarFormulario() {
   let codigo_producto = document.getElementById("codigo_producto").value;
-let nombre_producto = document.getElementById("nombre_producto").value;
-let cantidad_producto = document.getElementById("cantidad_producto").value;
-let marca_producto = document.getElementById("marca_producto").value;
+  let nombre_producto = document.getElementById("nombre_producto").value;
+  let cantidad_producto = document.getElementById("cantidad_producto").value;
+  let marca_producto = document.getElementById("marca_producto").value;
   if (
     codigo_producto === "" ||
     nombre_producto === "" ||
     cantidad_producto === "" ||
     marca_producto === ""
-  ) { 
-      console.log("Los campos están vacíos");
+  ) {
+    console.log("Los campos están vacíos");
   } else {
     if (codigo_producto != /[0-9]/) {
       console.log("Solo puede contener números");
@@ -27,7 +27,13 @@ let marca_producto = document.getElementById("marca_producto").value;
       console.log("Solo puede contener letras");
     }
 
-
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Your work has been saved",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   }
 }
 
